@@ -26,8 +26,8 @@ function generateDomains(p, a, n, tlds){
           }
         }
 
-  return [...out];
-}
+  return [generateDomains];
+
 
 const domains = generateDomains(pronoun, adj, noun, tlds);
 domains.forEach(d => console.log(d));
