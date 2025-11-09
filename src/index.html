@@ -1,20 +1,19 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generador de Dominios</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generador de nombres de dominio</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container text-center mt-5">
+    <main class="container">
       <h1>Generador de nombres de dominio</h1>
-      <p>Haz clic en el botón o recarga la página para generar nuevos dominios.</p>
-      <button id="btnGenerar" class="btn btn-primary mt-2">Generar dominios</button>
-      <div id="dominio" class="mt-4"></div>
-    </div>
+      <p>Haz clic en el botón o recarga la página para generar un dominio al azar.</p>
+      <button id="btnGenerar">Generar dominio</button>
+      <div id="dominio" class="resultado"></div>
+    </main>
 
-    <!-- No borres esta línea: conecta tu JS con el HTML -->
-    <script type="module" src="/app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

@@ -1,38 +1,53 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 body {
-  background: #f9fafb;
+  background: #f5f7fa;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #111;
   margin: 0;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 700px;
-  margin: 5vh auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+p {
+  color: #555;
+  margin-bottom: 1.2rem;
 }
 
 button {
   background-color: #2563eb;
-  color: white;
+  color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.2s;
 }
 
 button:hover {
   background-color: #1d4ed8;
 }
 
-.result {
-  text-align: left;
-  line-height: 1.6;
-  font-family: monospace;
-  margin-top: 1rem;
+.resultado {
+  margin-top: 1.8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0f172a;
 }
