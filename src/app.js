@@ -6,32 +6,34 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  document.querySelector("#dominio").innerHTML = dominios();
+  // Generar dominios automáticamente al cargar la página
+  generarDominios();
 
-  // Declaramos las listas de pronombres, adjetivos y sustantivos
-  function dominios() {
-    let pronouns = ["the", "our"];
-    let adjectives = ["great", "big"];
-    let nouns = ["jogger", "racoon"];
+  // Volver a generar dominios al hacer clic en el botón
+  document.querySelector("#btnGenerar").addEventListener("click", generarDominios);
 
-    // Creamos una matriz de nombres de dominio
-    let domains = [];
+  function generarDominios() {
+    // Listas base
+    const pronouns = ["the", "our"];
+    const adjectives = ["great", "big"];
+    const nouns = ["jogger", "racoon"];
 
-    // Iteramos sobre las listas de pronombres, adjetivos y sustantivos
+    // Crear combinaciones
+    const domains = [];
     for (let pronoun of pronouns) {
       for (let adjective of adjectives) {
         for (let noun of nouns) {
-          // sumamos los valores para crear un nombre de dominio
-          let dominios = "<br>" + pronoun + adjective + noun + ".com" + "</br>";
-
-          // Agregamos el nombre de dominio a la matriz
-          domains.push(dominios);
+          domains.push(`${pronoun}${adjective}${noun}.com`);
         }
       }
     }
 
-    // Imprimimos la matriz de nombres de dominio
-    console.log(dominios);
-    return domains;
+    // Mostrar en consola
+    console.log("Dominios generados:", domains);
+
+    // Mostrar en pantalla
+    document.querySelector("#dominio").innerHTML = domains
+      .map(domain => `<div>${domain}</div>`)
+      .join("");
   }
 };

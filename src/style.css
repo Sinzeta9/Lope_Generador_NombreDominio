@@ -1,4 +1,39 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-body{
-    background: white;
+
+body {
+  background: #f9fafb;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: 5vh auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.result {
+  text-align: left;
+  line-height: 1.6;
+  font-family: monospace;
+  margin-top: 1rem;
 }

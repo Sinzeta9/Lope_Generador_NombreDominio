@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generador de Dominios</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Generador de Dominios</title>
   </head>
   <body>
-    <main class="container">
+    <div class="container text-center mt-5">
       <h1>Generador de nombres de dominio</h1>
-      <p>Abre la consola del navegador para ver las combinaciones. También las mostramos aquí:</p>
-      <ul id="dominio" class="domain-list"></ul>
-      <p class="hint">Si quieres verlas en la terminal: <code>node app.js</code></p>
-    </main>
+      <p>Haz clic en el botón o recarga la página para generar nuevos dominios.</p>
+      <button id="btnGenerar" class="btn btn-primary mt-2">Generar dominios</button>
+      <div id="dominio" class="mt-4"></div>
+    </div>
 
-    <script src="./app.js" defer></script>
+    <!-- No borres esta línea: conecta tu JS con el HTML -->
+    <script type="module" src="/app.js"></script>
   </body>
 </html>
