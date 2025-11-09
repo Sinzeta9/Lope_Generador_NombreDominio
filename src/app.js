@@ -31,7 +31,7 @@ window.onload = function() {
     }
 
     // Imprimimos la matriz de nombres de dominio
-    console.log(domains);
+    console.log(dominios);
     return domains;
   }
 };
