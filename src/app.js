@@ -1,33 +1,37 @@
+/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
-const pronoun = ['the', 'our'];
-const adj     = ['great', 'big'];
-const noun    = ['jogger', 'racoon', 'puedes', 'devio'];
-const tlds    = ['.com', '.net', '.us', '.io', '.es']; 
+import "./assets/img/rigo-baby.jpg";
+import "./assets/img/4geeks.ico";
 
-function generateDomains(p, a, n, tlds){
-  const out = new Set();
+window.onload = function() {
+  document.querySelector("#dominio").innerHTML = dominios();
 
-  
-  for (const pr of p)
-    for (const ad of a)
-      for (const no of n)
-        for (const t of tlds)
-          out.add(`${pr}${ad}${no}${t}`);
+  // Declaramos las listas de pronombres, adjetivos y sustantivos
+  function dominios() {
+    let pronouns = ["the", "our"];
+    let adjectives = ["great", "big"];
+    let nouns = ["jogger", "racoon"];
 
-  for (const pr of p)
-    for (const ad of a)
-      for (const no of n)
-        for (const t of tlds){
-          const suf = t.slice(1); 
-            const stem = no.slice(0, -suf.length);
-            out.add(`${pr}${ad}${stem}${t}`); 
-          }
+    // Creamos una matriz de nombres de dominio
+    let domains = [];
+
+    // Iteramos sobre las listas de pronombres, adjetivos y sustantivos
+    for (let pronoun of pronouns) {
+      for (let adjective of adjectives) {
+        for (let noun of nouns) {
+          // sumamos los valores para crear un nombre de dominio
+          let dominios = "<br>" + pronoun + adjective + noun + ".com" + "</br>";
+
+          // Agregamos el nombre de dominio a la matriz
+          domains.push(dominios);
         }
+      }
+    }
 
-  return [generateDomains];
-
-
-const domains = generateDomains(pronoun, adj, noun, tlds);
-domains.forEach(d => console.log(d));
+    // Imprimimos la matriz de nombres de dominio
+    console.log(domains);
+    return domains;
+  }
+};
